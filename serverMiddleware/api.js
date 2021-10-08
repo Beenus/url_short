@@ -6,7 +6,7 @@ const validation = require('../utils/validation')
 
 app.use(express.json())
 
-db.sequelize.sync({force: true})
+db.sequelize.sync()
 
 app.get('/url', (req, res) => {
   db.links.findAll().then(items => res.json({data: items}))
