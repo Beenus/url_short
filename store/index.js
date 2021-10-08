@@ -15,11 +15,11 @@ export const actions = {
     await commit('SET_HOST', req.headers.host)
   },
   async getUrlData ({state}, url) {
-    const res = await axios.get(`http://${state.host}/api/url/${url}`)
+    const res = await axios.get(`https://${state.host}/api/url/${url}`)
     return res.data
   },
   async createUrl ({state}, url) {
-    const res = await axios.post(`http://${state.host}/api/url`, {
+    const res = await axios.post(`https://${state.host}/api/url`, {
       params: {
         originalUrl: url
       }
