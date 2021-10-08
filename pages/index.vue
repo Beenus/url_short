@@ -76,7 +76,7 @@ export default {
       }
     },
     fullUrl () {
-      return `http://${this.$store.state.host}/s/${this.newUrl.shortUrl}`
+      return `https://${this.$store.state.host}/s/${this.newUrl.shortUrl}`
     }
   }
 }
